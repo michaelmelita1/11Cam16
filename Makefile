@@ -1,9 +1,12 @@
+FINALPACKAGE=1
+ARCHS = arm64
+TARGET = iphone:14.5
+INSTALL_TARGET_PROCESSES = Camera
+
 include $(THEOS)/makefiles/common.mk
 
-AGGREGATE_NAME = 11Cam15
-SUBPROJECTS += 11CamSingle 11CamDual
+TWEAK_NAME = 11Cam16
+11Cam16_FILES = Tweak.x
+11Cam16_CFLAGS = -fobjc-arc
 
-after-install::
-	install.exec "ldrestart"
-
-include $(THEOS_MAKE_PATH)/aggregate.mk
+include $(THEOS_MAKE_PATH)/tweak.mk
