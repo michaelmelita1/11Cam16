@@ -39,9 +39,6 @@
 -(long long)supportedPortraitLightingVersion {	
                 return 2;
 }
--(bool)_backStageLightPortaitEffectsSupported {
-		return YES;
-}
 -(bool)isBackLiveStageLightSupported {
 		return YES;
 }
@@ -53,9 +50,6 @@
 		arg1 = 1;
 		arg2 = 1;
 }
--(bool)isDepthEffectApertureSupported {  //Portrait Depth Effect Code
-		return YES;
-}
 -(bool)isImageAnalysisSupported {                       //Live Text Code
                 return YES;
 }
@@ -66,29 +60,6 @@
                 return YES;
 }
 -(bool)isBackSpatialOverCaptureSupported {                  
-                return YES;
-}
--(bool)isBack4k60VideoSupported {  // iPhone 7 and 7 Plus Feature Unlock
-                return YES;
-}
--(bool)isBack1080p240Supported {                  
-                return YES;
-}
--(bool)isBack4k24VideoSupported {                  
-                return YES;
-}
-%end
-%hook CAMUserPreferences   //Hook Cam User Preferences to ensure the function enabled
--(bool)shouldUseVolumeUpBurst {
-                return YES;
-}		
--(bool)isPhotoOverCaptureEnabled {
-                return YES;
-}
--(bool)isOverCapturePreviewEnabled {
-                return YES;
-}
--(bool)isImageAnalysisEnabled {
                 return YES;
 }
 %end
