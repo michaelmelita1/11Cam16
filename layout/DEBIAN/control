@@ -4,7 +4,7 @@ Architecture: iphoneos-arm
 Maintainer: Michael Melita
 Depends: mobilesubstrate, firmware (>= 16.0) cy+cpu.arm64
 Section: Tweaks
-Description: New Camera app for iOS 15
+Description: New Camera app for iOS 16
 Author: Michael Melita, Flylarb & Ezekiel1998
 Name: 11Cam16
 Depiction: https://michaelmelita1.github.io/depictions/?p=com.michaelmelita1.11cam16
