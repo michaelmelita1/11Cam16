@@ -4,13 +4,10 @@
 if [ -d "/System/Library/PrivateFrameworks/CMCapture.framework/D211" ] 
 then
    echo "D211 exists - iPhone 8+ Detected." 
-
    rm -rf /System/Library/PrivateFrameworks/CMCapture.framework/D211/AVCaptureSession.plist
    cp -R "/Library/Application Support/11Cam16/D211BAK/AVCaptureSession.plist" /System/Library/PrivateFrameworks/CMCapture.framework/D211/
    rm -rf "/Library/Application Support/11Cam16/D211BAK/AVCaptureSession.plist"
    rm -rf "/Library/Application Support/11Cam16/D211BAK/"
-
-
 else
    echo "Error: D211 does not exists."
 fi
@@ -18,16 +15,23 @@ fi
 if [ -d "/System/Library/PrivateFrameworks/CMCapture.framework/D221" ] 
 then
     echo "D221 exists - iPhone X Detected." 
-
     rm -rf /System/Library/PrivateFrameworks/CMCapture.framework/D221/AVCaptureSession.plist
     cp -R "/Library/Application Support/11Cam16/D221BAK/AVCaptureSession.plist" /System/Library/PrivateFrameworks/CMCapture.framework/D221/
     rm -rf "/Library/Application Support/11Cam16/D221BAK/AVCaptureSession.plist"
     rm -rf "/Library/Application Support/11Cam16/D221BAK/"
-
 else
     echo "Error: D221 does not exists."
 fi
-
+if [ -d "/System/Library/PrivateFrameworks/CMCapture.framework/D22" ] 
+then
+    echo "D221 exists - iPhone X Detected." 
+    rm -rf /System/Library/PrivateFrameworks/CMCapture.framework/D22/AVCaptureSession.plist
+    cp -R "/Library/Application Support/11Cam16/D22BAK/AVCaptureSession.plist" /System/Library/PrivateFrameworks/CMCapture.framework/D22/
+    rm -rf "/Library/Application Support/11Cam16/D22BAK/AVCaptureSession.plist"
+    rm -rf "/Library/Application Support/11Cam16/D22BAK/"
+else
+    echo "Error: D22 does not exists."
+fi
 rm -rf "/Library/Application Support/11Cam16/*"
 
 echo "Flushing camera formats..."
