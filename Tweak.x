@@ -63,7 +63,18 @@
                 return YES;
 }
 %end
+%hook CAMDynamicShutterControl
 
+// Fixes shutter
+- (BOOL)_shouldShortPressOnTouchDown {
+	return true;
+}
+
+- (BOOL)_shouldShortPressOnTouchUp {
+	return true;
+}
+
+%end
 %hook AVCaptureDeviceFormat				//Depth Control and Intensity Control Code
 -(float)minSimulatedAperture {
 		return 1.4;
